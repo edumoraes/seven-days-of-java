@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -13,6 +14,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
+
+        //HTTP request
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest
                 .newBuilder()
@@ -21,6 +24,7 @@ public class Main {
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
+        //Parser
         ObjectMapper objectMapper = new ObjectMapper();
 
         JsonNode responseNode = objectMapper
@@ -37,11 +41,13 @@ public class Main {
                 .reader(collectionType)
                 .readValue(responseNode);
 
-        for (int i = 0; i < listMovies.size(); i++) {
-            String title = listMovies.get(i).getTitle();
-            String rank = listMovies.get(i).getRank();
-            System.out.println(rank + " " + title);
-        }
+
+
+        HTMLGenerator html = new HTMLGenerator();
+
+        html.generate(listMovies);
+
+
 
     }
 }
