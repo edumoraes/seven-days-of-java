@@ -1,7 +1,7 @@
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Movie {
+public class Movie implements Content {
 
     private String id;
     private String rank;
