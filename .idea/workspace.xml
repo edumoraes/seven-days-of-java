@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad95018-3117-4fa8-9e32-d533c655a8aa" name="Changes" comment="Parseando resposta da API">
-      <change afterPath="$PROJECT_DIR$/src/HTMLGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ad95018-3117-4fa8-9e32-d533c655a8aa" name="Changes" comment="Criando ImdbApiClient">
+      <change afterPath="$PROJECT_DIR$/src/ImdbParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -97,6 +96,9 @@
       <workItem from="1673712264236" duration="5585000" />
       <workItem from="1673810503408" duration="4515000" />
       <workItem from="1673861206406" duration="11060000" />
+      <workItem from="1673875863890" duration="154000" />
+      <workItem from="1673971208547" duration="1479000" />
+      <workItem from="1673986087830" duration="3718000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Inicial">
       <created>1673556060497</created>
@@ -119,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673681690938</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Gerando HTML">
+      <created>1673876002000</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673876002000</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Criando ImdbApiClient">
+      <created>1673991502039</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673991502040</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +145,8 @@
     <MESSAGE value="Commit Inicial" />
     <MESSAGE value="Criando request HTTP e imprimindo no console" />
     <MESSAGE value="Parseando resposta da API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parseando resposta da API" />
+    <MESSAGE value="Gerando HTML" />
+    <MESSAGE value="Criando ImdbApiClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando ImdbApiClient" />
   </component>
 </project>
