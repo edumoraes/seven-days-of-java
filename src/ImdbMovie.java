@@ -1,46 +1,48 @@
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MarvelSeries implements Content {
-    private int id;
+public class ImdbMovie implements Content {
+
+    private String id;
     private String title;
     private String year;
     private String image;
-    private String imagePath;
-    private String imageExtension;
+    private String imDbRating;
 
     @JsonCreator
-    public MarvelSeries(
-            @JsonProperty("id") final int id,
+    public ImdbMovie(
+            @JsonProperty("id") final String id,
             @JsonProperty("title") final String title,
-            @JsonProperty("startYear") final String year,
-            @JsonProperty("path") final String imagePath,
-            @JsonProperty("extension") final String imageExtension) {
+            @JsonProperty("year") final String year,
+            @JsonProperty("image") final String image,
+            @JsonProperty("imDbRating") final String imDbRating) {
         this.id = id;
         this.title = title;
         this.year = year;
-        this.image = imagePath + "." + imageExtension;
+        this.image = image;
+        this.imDbRating = imDbRating;
     }
-
     @Override
     public String getId() {
-        String idString = Integer.toString(id);
-        return idString;
+        return id;
     }
+
     @Override
     public String getTitle() {
         return title;
     }
+
     @Override
     public String getYear() {
         return year;
     }
-    @Override
+
     public String getImage() {
         return image;
     }
+
     @Override
     public String getRating() {
-        return "Sem valor";
+        return imDbRating;
     }
 }

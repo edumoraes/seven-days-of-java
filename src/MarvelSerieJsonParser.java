@@ -7,8 +7,9 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import java.io.IOException;
 import java.util.List;
 
-public class ImdbParser {
-    public List<Movie> generateList(String responseBody) throws IOException {
+public class MarvelSerieJsonParser implements JsonParser{
+    @Override
+    public List<Content> generateList(String responseBody) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode responseNode = objectMapper
                 .readTree(responseBody)
@@ -16,11 +17,10 @@ public class ImdbParser {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); //Exception double quote
         CollectionType collectionType = TypeFactory
                 .defaultInstance()
-                .constructCollectionType(List.class, Movie.class);
-        List<Movie> listMovies = objectMapper
+                .constructCollectionType(List.class, ImdbMovie.class);
+        List<Content> listMovies = objectMapper
                 .reader(collectionType)
                 .readValue(responseNode);
         return listMovies;
     }
-
 }

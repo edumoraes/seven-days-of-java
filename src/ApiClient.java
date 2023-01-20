@@ -4,10 +4,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class ImdbApiClient {
+public class ApiClient {
     private String apiUri;
 
-    public ImdbApiClient (String apiUri) {
+    public ApiClient(String apiUri) {
         this.apiUri = apiUri;
     }
 

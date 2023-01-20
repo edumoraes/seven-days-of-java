@@ -1,13 +1,17 @@
 import java.io.IOException;
-
 import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        ImdbApiClient top250Movies = new ImdbApiClient("URI_API");
-        ImdbParser parser = new ImdbParser();
-        HTMLGenerator html = new HTMLGenerator();
-        html.generate(parser.generateList(top250Movies.response().body()));
+        String topImdb = new ApiClient("URI_IMDB").response().body();
+        List<Content> parserImdb = new ImdbMovieJsonParser().generateList(topImdb);
+        new HTMLGenerator("./topimdb.html").generate(parserImdb);
+
+        /*String seriesMarvel = new ApiClient("URI_MARVEL").response().body();
+        List<Content> parserMarvel = new MarvelSerieJsonParser().generateList(seriesMarvel);
+        new HTMLGenerator("./marvelseries.html").generate(parserMarvel);*/
+
     }
 }

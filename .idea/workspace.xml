@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad95018-3117-4fa8-9e32-d533c655a8aa" name="Changes" comment="Criando interface Content">
-      <change afterPath="$PROJECT_DIR$/src/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MarvelSeries.java" afterDir="false" />
+    <list default="true" id="7ad95018-3117-4fa8-9e32-d533c655a8aa" name="Changes" comment="Criando a class MarvelSeries">
+      <change afterPath="$PROJECT_DIR$/src/JsonParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MarvelSerieJsonParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImdbApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImdbParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImdbMovieJsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarvelSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarvelSeries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImdbMovie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,29 +48,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/eduardo/Projects/BroadleafCommerce",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "rest.client.default.execution.environment": "dev",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eduardo/Projects/BroadleafCommerce&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rest.client.default.execution.environment&quot;: &quot;dev&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="excludedTypes">
       <set>
@@ -75,7 +81,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
-        <env name="URI_API" value="https://imdb-api.com/en/API/Top250Movies/k_scb2h4qc" />
+        <env name="URI_IMDB" value="https://imdb-api.com/en/API/Top250Movies/k_scb2h4qc" />
         <env name="URI_MARVEL" value="https://gateway.marvel.com:443/v1/public/series?apikey=b098a5d9cc98e7354d65f76169cf72ec" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -101,7 +107,9 @@
       <workItem from="1673861206406" duration="11060000" />
       <workItem from="1673875863890" duration="154000" />
       <workItem from="1673971208547" duration="1479000" />
-      <workItem from="1673986087830" duration="9321000" />
+      <workItem from="1673986087830" duration="12338000" />
+      <workItem from="1674043931472" duration="1180000" />
+      <workItem from="1674186150072" duration="4171000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Inicial">
       <created>1673556060497</created>
@@ -159,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673999727094</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implementando Interface Content na class Movie">
+      <created>1673999779429</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673999779429</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Criando a class MarvelSeries">
+      <created>1673999814160</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673999814160</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +196,8 @@
     <MESSAGE value="Criando ImdbParser" />
     <MESSAGE value="Alterando Main" />
     <MESSAGE value="Criando interface Content" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando interface Content" />
+    <MESSAGE value="Implementando Interface Content na class Movie" />
+    <MESSAGE value="Criando a class MarvelSeries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando a class MarvelSeries" />
   </component>
 </project>

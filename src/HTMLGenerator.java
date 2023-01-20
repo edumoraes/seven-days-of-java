@@ -5,12 +5,14 @@ import java.util.List;
 
 public class HTMLGenerator<writer> {
     private Writer writer;
+    private String htmlPath;
 
-    public HTMLGenerator() throws IOException {
-        this.writer = new FileWriter("./index.html");
+    public HTMLGenerator(String htmlPath) throws IOException {
+        this.htmlPath = htmlPath;
+        this.writer = new FileWriter(htmlPath);
     }
 
-    public void generate(List<Movie> movie) {
+    public void generate(List<Content> movie) {
         try {
             String head =
                     """
@@ -68,7 +70,7 @@ public class HTMLGenerator<writer> {
                     """;
             writer.write(head);
             for (int i = 0; i < movie.size(); i++) {
-                writer.write(String.format(divTemplate, movie.get(i).getImage(), movie.get(i).getTitle(), movie.get(i).getTitle(), movie.get(i).getYear(), movie.get(i).getImDbRating(), movie.get(i).getCrew()));
+                writer.write(String.format(divTemplate, movie.get(i).getImage(), movie.get(i).getTitle(), movie.get(i).getTitle(), movie.get(i).getYear(), movie.get(i).getRating()));
             }
             writer.write(end);
             writer.close();
